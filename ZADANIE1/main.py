@@ -5,7 +5,9 @@ def transform_texts(texts):
       2) zamienione na wielkie litery,
       3) odwrócone (w sensie kolejności znaków).
     """
-    
+    filtered_texts = filter(lambda t: t.strip(), texts)
+    transformed = map(lambda t: t.strip().upper()[::-1], filtered_texts)
+    return list(transformed)
     # Odfiltruj puste napisy.
     # filtered_texts = [t for t in texts if ...]
 
@@ -13,7 +15,7 @@ def transform_texts(texts):
     # transformed = map(lambda t: ..., filtered_texts)
 
     # Zwróć wyniki w postaci listy.
-    pass
+
 
 if __name__ == '__main__':
     # Przykładowe wywołanie:

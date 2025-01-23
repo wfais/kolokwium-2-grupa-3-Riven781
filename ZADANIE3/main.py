@@ -19,15 +19,26 @@ def draw_scatter_plot():
     # utwórz x, y
     # x = ...
     # y = ...
+
+    x = np.arange(10)
+    y = np.random.rand(10) * 10
     
-    # fig, ax = 
+    # fig, ax =
+
+    fig, ax = plt.subplots()
+    ax.scatter(x, y, color='blue', label='Punkty')
     
     # ax.scatter( ... )
+
+    ax.set_xlabel('X axis')
+    ax.set_ylabel('Y axis')
+    ax.set_title('Scatter Plot Example')
+    ax.legend()
     
     # label dla x, y, title, legend
-    
+    return fig
     # return rysunek
-    pass
+
 
 if __name__ == '__main__':
     fig = draw_scatter_plot()
